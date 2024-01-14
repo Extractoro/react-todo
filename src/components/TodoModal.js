@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import toast from 'react-hot-toast'
 import { MdClose } from 'react-icons/md'
 import { useDispatch } from 'react-redux'
 import { v4 as uuid } from 'uuid'
@@ -22,6 +23,9 @@ const TodoModal = ({ isModal, setIsModal }) => {
                time: new Date().toLocaleString(),
             }),
          )
+         toast.success('Task added!')
+      } else {
+         toast.error('Title should not be empty!')
       }
    }
 
