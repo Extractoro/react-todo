@@ -21,7 +21,7 @@ const AppHeader = () => {
             <option value="complete">Complete</option>
          </SelectButton>
 
-         <TodoModal isModal={isModal} setIsModal={setIsModal} />
+         <TodoModal type="add" isModal={isModal} setIsModal={setIsModal} />
       </div>
    )
 }
